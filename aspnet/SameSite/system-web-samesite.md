@@ -150,7 +150,7 @@ Because the 2016 and 2019 draft specifications are not compatible, the November 
   * While most apps work with `SameSite=Lax` cookies, apps that POST across sites or applications that make use of `iframe` may find that their session state or forms authorization cookies aren't being used as expected. To remedy this, change the `cookieSameSite` value in the appropriate configuration section as discussed previously.
 * HttpCookies that explicitly set `SameSite=None` in code or configuration now have that value written with the cookie, whereas it was previously omitted. This may cause issues with older browsers that only support the 2016 draft standard.
   * When targeting browsers supporting the 2019 draft standard with `SameSite=None` cookies, remember to also mark them `Secure` or they may not be recognized.
-  * To revert to the 2016 behavior of not writing `SameSite=None`, use the app setting `aspnet:SupressSameSiteNone=true`. Note that this will apply to all HttpCookies in the app.
+  * To revert to the 2016 behavior of not writing `SameSite=None`, use the app setting `aspnet:SuppressSameSiteNone=true`. Note that this will apply to all HttpCookies in the app.
 
 ### Azure App Service—SameSite cookie handling
 
